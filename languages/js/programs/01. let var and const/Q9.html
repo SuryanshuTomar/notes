@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9: Block Scope</title>
+</head>
+<body>
+    <h1>Q9: Are var, let, and const block scoped?</h1>
+    <p><code>let</code> and <code>const</code> are block scoped, meaning they are only accessible within the block they are defined. <code>var</code> is not block scoped; it is function scoped or globally scoped.</p>
+    <pre><code>{
+    var blockVar = 'I am var';
+    let blockLet = 'I am let';
+    const blockConst = 'I am const';
+}
+console.log(blockVar); // 'I am var'
+// console.log(blockLet); // ReferenceError
+// console.log(blockConst); // ReferenceError
+</code></pre>
+    <a href="./Q8.html">Previous: Q8</a> | <a href="./Q10.html">Next: Q10</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

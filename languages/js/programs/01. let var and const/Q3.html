@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Temporal Dead Zone (TDZ)</title>
+</head>
+<body>
+    <h1>Q3: What is temporal dead zone (TDZ)?</h1>
+    <p>The <b>temporal dead zone (TDZ)</b> is the period between entering scope and variable declaration for <code>let</code> and <code>const</code>. Accessing the variable in the TDZ throws a <code>ReferenceError</code>.</p>
+    <pre><code>// console.log(y); // ReferenceError
+let y = 10;
+// console.log(z); // ReferenceError
+const z = 15;
+</code></pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+    function print(msg) {
+        document.getElementById('console').textContent += msg + '\n';
+        console.log(msg);
+    }
+    // Q3 code using print
+    // try { print(y); } catch(e) { print(e); }
+    let y = 10;
+    // try { print(z); } catch(e) { print(e); }
+    const z = 15;
+    </script>
+    <a href="./Q2.html">Previous: Q2</a> | <a href="./Q4.html">Next: Q4</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

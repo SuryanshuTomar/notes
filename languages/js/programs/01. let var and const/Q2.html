@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Variable Hoisting</title>
+</head>
+
+<body>
+    <h1>Q2: What is variable hoisting? How does it differ for var, let, and const?</h1>
+    <p><b>Hoisting</b> means variable declarations are moved to the top of their scope. <b>var</b> is hoisted and
+        initialized as <code>undefined</code>. <b>let</b> and <b>const</b> are hoisted but not initialized, so accessing
+        them before declaration throws a <code>ReferenceError</code> (temporal dead zone).</p>
+    <pre>
+        <code>
+            console.log(x); // undefined (var is hoisted in global scope)
+            var x = 5;
+            console.log(y); // ReferenceError
+            let y = 10;
+            console.log(z); // ReferenceError
+            const z = 15;
+        </code>
+    </pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+        function print(msg) {
+            document.getElementById('console').textContent += msg + '\n';
+            console.log(msg);
+        }
+        function safePrint(variableName) {
+            try {
+                print(eval(variableName));
+            } catch (error) {
+                print(error);
+            }
+        }
+
+        // Q2 code using print
+        safePrint("x"); // undefined (var is hoisted in global scope)
+
+        var x = 5;
+
+        safePrint("y"); // ReferenceError
+        let y = 10;
+
+        safePrint("z"); // ReferenceError
+        const z = 15;
+    </script>
+    <a href="./Q1.html">Previous: Q1</a> | <a href="./Q3.html">Next: Q3</a> | <a href="../index.html">Back to
+        Questions</a>
+</body>
+
+</html>

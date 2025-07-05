@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q15: Closures in loops</title>
+</head>
+<body>
+    <h1>Q15: How do closures interact with var, let, and const in loops?</h1>
+    <p>With <code>var</code>, all closures in a loop share the same variable, so they capture the final value. With <code>let</code>, each iteration gets a new binding, so closures capture the correct value for each iteration.</p>
+    <pre><code>var funcsVar = [];
+let funcsLet = [];
+for (var k = 0; k < 3; k++) {
+    funcsVar.push(() => k);
+}
+for (let l = 0; l < 3; l++) {
+    funcsLet.push(() => l);
+}
+console.log(funcsVar.map(fn => fn())); // [3, 3, 3]
+console.log(funcsLet.map(fn => fn())); // [0, 1, 2]
+</code></pre>
+    <a href="./Q14.html">Previous: Q14</a> | <a href="./Q16.html">Next: Q16</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

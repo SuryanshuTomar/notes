@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q20: var, let, const in eval</title>
+</head>
+<body>
+    <h1>Q20: What happens if you use var, let, and const in eval?</h1>
+    <p>Variables declared with <code>var</code> inside <code>eval</code> become properties of the global object. <code>let</code> and <code>const</code> are block scoped and not accessible outside <code>eval</code>.</p>
+    <pre><code>eval('var evalVar = 1;');
+eval('let evalLet = 2;');
+eval('const evalConst = 3;');
+console.log(evalVar); // 1
+// console.log(evalLet); // ReferenceError
+// console.log(evalConst); // ReferenceError
+</code></pre>
+    <a href="./Q19.html">Previous: Q19</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

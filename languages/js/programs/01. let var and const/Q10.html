@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10: Scope of var, let, and const</title>
+</head>
+<body>
+    <h1>Q10: What is the scope of var, let, and const?</h1>
+    <p><code>var</code> is function scoped, so it is accessible anywhere within the function. <code>let</code> and <code>const</code> are block scoped, so they are only accessible within the block they are defined.</p>
+    <pre><code>function scopeTest() {
+    if (true) {
+        var x = 1;
+        let y = 2;
+        const z = 3;
+    }
+    console.log(x); // 1 (function scoped)
+    // console.log(y); // ReferenceError (block scoped)
+    // console.log(z); // ReferenceError (block scoped)
+}
+scopeTest();
+</code></pre>
+    <a href="./Q9.html">Previous: Q9</a> | <a href="./Q11.html">Next: Q11</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

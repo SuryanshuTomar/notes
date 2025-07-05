@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q13: Properties on global variables</title>
+</head>
+<body>
+    <h1>Q13: Can you attach properties to variables declared with var, let, or const in the global scope?</h1>
+    <p>In browsers, <code>var</code> declarations in the global scope become properties of the <code>window</code> object. <code>let</code> and <code>const</code> do not.</p>
+    <pre><code>var globalVar = 1;
+let globalLet = 2;
+const globalConst = 3;
+console.log(window.globalVar); // 1
+// console.log(window.globalLet); // undefined
+// console.log(window.globalConst); // undefined
+</code></pre>
+    <a href="./Q12.html">Previous: Q12</a> | <a href="./Q14.html">Next: Q14</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

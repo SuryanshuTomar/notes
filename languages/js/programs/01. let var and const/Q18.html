@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q18: const object vs const primitive</title>
+</head>
+<body>
+    <h1>Q18: What is the difference between const object and const primitive?</h1>
+    <p><code>const</code> means the variable cannot be reassigned, but for objects and arrays, their contents can still be changed (mutated).</p>
+    <pre><code>const arr = [1, 2];
+arr.push(3); // allowed
+// arr = [4, 5]; // Error
+
+const obj = { a: 1 };
+obj.b = 2; // allowed
+// obj = {}; // Error
+</code></pre>
+    <a href="./Q17.html">Previous: Q17</a> | <a href="./Q19.html">Next: Q19</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

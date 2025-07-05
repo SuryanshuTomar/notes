@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q16: Same name in different scopes</title>
+</head>
+<body>
+    <h1>Q16: What happens if you declare a variable with the same name in different scopes?</h1>
+    <p>You can declare variables with the same name in different (nested) scopes. Each variable is only accessible within its own scope.</p>
+    <pre><code>let outer = 'outer';
+{
+    let outer = 'inner';
+    {
+        let outer = 'innermost';
+        console.log(outer); // 'innermost'
+    }
+    console.log(outer); // 'inner'
+}
+console.log(outer); // 'outer'
+</code></pre>
+    <a href="./Q15.html">Previous: Q15</a> | <a href="./Q17.html">Next: Q17</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

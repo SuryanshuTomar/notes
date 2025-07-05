@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q14: let/const in global scope and strict mode</title>
+</head>
+<body>
+    <h1>Q14: What happens with let/const in the global scope in strict mode?</h1>
+    <p>In strict mode, <code>let</code> and <code>const</code> variables declared in the global scope do not become properties of the <code>window</code> object.</p>
+    <pre><code>"use strict";
+// let strictLet = 10;
+// console.log(window.strictLet); // undefined
+</code></pre>
+    <a href="./Q13.html">Previous: Q13</a> | <a href="./Q15.html">Next: Q15</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

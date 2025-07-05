@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q11: Hoisting and Functions</title>
+</head>
+<body>
+    <h1>Q11: How does variable hoisting interact with function declarations and expressions?</h1>
+    <p>Function declarations are hoisted and can be called before their definition. Function expressions (assigned to <code>var</code>) are hoisted as variables (initialized as <code>undefined</code>), so calling them before assignment throws a <code>TypeError</code>.</p>
+    <pre><code>console.log(hoistedFunc()); // 'I am hoisted'
+// console.log(exprFunc()); // TypeError: exprFunc is not a function
+
+function hoistedFunc() {
+    return 'I am hoisted';
+}
+
+var exprFunc = function() {
+    return 'I am an expression';
+};
+</code></pre>
+    <a href="./Q10.html">Previous: Q10</a> | <a href="./Q12.html">Next: Q12</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

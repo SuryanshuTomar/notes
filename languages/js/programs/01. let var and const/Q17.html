@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q17: Use before declaration</title>
+</head>
+<body>
+    <h1>Q17: Can you use let or const before declaration in the same block?</h1>
+    <p>No, using <code>let</code> or <code>const</code> before their declaration in the same block results in a <code>ReferenceError</code> due to the temporal dead zone.</p>
+    <pre><code>// console.log(beforeLet); // ReferenceError
+let beforeLet = 5;
+</code></pre>
+    <a href="./Q16.html">Previous: Q16</a> | <a href="./Q18.html">Next: Q18</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

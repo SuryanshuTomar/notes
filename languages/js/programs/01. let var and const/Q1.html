@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1: Difference between var, let, and const</title>
+</head>
+
+<body>
+    <h1>Q1: What is the difference between var, let, and const?</h1>
+    <p><b>var</b> is function-scoped, can be redeclared, and is hoisted (initialized as <code>undefined</code>).
+        <b>let</b> and <b>const</b> are block-scoped, cannot be redeclared in the same scope, and are hoisted but not
+        initialized (temporal dead zone). <b>const</b> must be initialized at declaration and cannot be reassigned.
+    </p>
+    <pre>
+        <code>
+            var a = 1;
+            let b = 2;
+            const c = 3;
+            a = 10; // allowed
+            b = 20; // allowed
+            // c = 30; // Error: Assignment to constant variable
+            console.log(a, b, c); // 10 20 3
+        </code>
+    </pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+        function print(msg) {
+            document.getElementById('console').textContent += msg + '\n';
+            console.log(msg);
+        }
+        // Q1 code using print
+        var a = 1;
+        let b = 2;
+        const c = 3;
+        a = 10; // allowed
+        b = 20; // allowed
+        // c = 30; // Error: Assignment to constant variable
+        print([a, b, c].join(' ')); // 10 20 3
+    </script>
+    <a href="./Q2.html">Next: Q2</a> | <a href="../index.html">Back to Questions</a>
+</body>
+
+</html>

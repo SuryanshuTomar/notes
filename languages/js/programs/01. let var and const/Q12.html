@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q12: let/const in for loop header</title>
+</head>
+<body>
+    <h1>Q12: What happens if you use let/const in a for loop header?</h1>
+    <p>When using <code>let</code> in a for loop header, a new binding is created for each iteration, so closures capture the correct value. With <code>var</code>, the same variable is used, so closures capture the final value after the loop ends.</p>
+    <pre><code>for (let i = 0; i < 2; i++) {
+    setTimeout(() => console.log('let i:', i), 0); // 0, 1
+}
+for (var j = 0; j < 2; j++) {
+    setTimeout(() => console.log('var j:', j), 0); // 2, 2
+}
+</code></pre>
+    <a href="./Q11.html">Previous: Q11</a> | <a href="./Q13.html">Next: Q13</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

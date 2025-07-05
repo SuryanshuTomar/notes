@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7: Redeclaring var in the same scope</title>
+</head>
+<body>
+    <h1>Q7: What happens if you redeclare a variable with var in the same scope?</h1>
+    <p>You can redeclare a <code>var</code> variable in the same scope. The last declaration overwrites the previous value.</p>
+    <pre><code>var test = 1;
+var test = 2; // allowed
+console.log(test); // 2
+</code></pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+    function print(msg) {
+        document.getElementById('console').textContent += msg + '\n';
+        console.log(msg);
+    }
+    // Q7 code using print
+    var test = 1;
+    var test = 2; // allowed
+    print(test); // 2
+    </script>
+    <a href="./Q6.html">Previous: Q6</a> | <a href="./Q8.html">Next: Q8</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

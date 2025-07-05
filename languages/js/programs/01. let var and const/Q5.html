@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5: Shadowing var with let/const</title>
+</head>
+<body>
+    <h1>Q5: Can you shadow a variable declared with var using let or const?</h1>
+    <p>Yes, you can shadow a <code>var</code> variable with <code>let</code> or <code>const</code> in a block scope. The inner variable is only accessible within the block.</p>
+    <pre><code>var num = 100;
+{
+    let num = 200; // allowed, shadows outer 'num'
+    console.log(num); // 200
+}
+console.log(num); // 100
+</code></pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+    function print(msg) {
+        document.getElementById('console').textContent += msg + '\n';
+        console.log(msg); // also log to console for debugging
+    }
+
+    // Q5 code using print instead of console.log
+    var num = 100;
+    {
+        let num = 200; // allowed, shadows outer 'num'
+        print(num); // 200
+    }
+    print(num); // 100
+    </script>
+    <a href="./Q4.html">Previous: Q4</a> | <a href="./Q6.html">Next: Q6</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

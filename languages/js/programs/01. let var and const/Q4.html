@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4: Variable Shadowing</title>
+</head>
+<body>
+    <h1>Q4: What is variable shadowing?</h1>
+    <p><b>Variable shadowing</b> occurs when a variable declared within a certain scope (e.g., block) has the same name as a variable in an outer scope. The inner variable "shadows" the outer one within its scope.</p>
+    <pre><code>let value = 'outer';
+{
+    let value = 'inner'; // shadows outer 'value'
+    console.log(value); // 'inner'
+}
+console.log(value); // 'outer'
+</code></pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+    function print(msg) {
+        document.getElementById('console').textContent += msg + '\n';
+        console.log(msg);
+    }
+    // Q4 code using print
+    let value = 'outer';
+    {
+        let value = 'inner'; // shadows outer 'value'
+        print(value); // 'inner'
+    }
+    print(value); // 'outer'
+    </script>
+    <a href="./Q3.html">Previous: Q3</a> | <a href="./Q5.html">Next: Q5</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6: Shadowing let with var</title>
+</head>
+<body>
+    <h1>Q6: Can you shadow a variable declared with let using var?</h1>
+    <p>No, you cannot shadow a <code>let</code> variable with <code>var</code> in the same or inner scope. Doing so results in a <code>SyntaxError</code>.</p>
+    <pre><code>let foo = 1;
+{
+    // var foo = 2; // SyntaxError: Identifier 'foo' has already been declared
+}
+</code></pre>
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+    <script>
+    function print(msg) {
+        document.getElementById('console').textContent += msg + '\n';
+        console.log(msg);
+    }
+    // Q6 code using print
+    let foo = 1;
+    try {
+        // var foo = 2; // SyntaxError: Identifier 'foo' has already been declared
+        print('No error at declaration, but uncommenting var foo = 2 would throw SyntaxError.');
+    } catch(e) { print(e); }
+    </script>
+    <a href="./Q5.html">Previous: Q5</a> | <a href="./Q7.html">Next: Q7</a> | <a href="../index.html">Back to Questions</a>
+</body>
+</html>
